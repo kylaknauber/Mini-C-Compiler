@@ -1,0 +1,15 @@
+num main  ()
+{
+    num x  ;
+    num y  ;
+    if ( false ) {
+        x <- 1;
+        y <- x + 1;
+    } else {
+        x <- 2;
+        y <- (x - 10)*1.5;
+    }
+    print x;
+    print y;
+    return 1 ;
+}

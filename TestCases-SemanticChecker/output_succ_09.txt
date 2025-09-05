@@ -1,0 +1,72 @@
+Success: no semantic error is found.
+
+================================================================================
+Code with indentations:
+num fib(num n)
+{
+    num n1;
+    num n2;
+    if( n <= 1.0 )
+    {
+        return n;
+    }
+    else
+    {
+        n1 <- fib(n - 1.0);
+        n2 <- fib(n - 2.0);
+        return (n1 + n2);
+    }
+}
+
+num main()
+{
+    num[] fibs;
+    num i;
+    fibs <- new num[15.0];
+    i <- 0.0;
+    while( i < fibs.size )
+    {
+        fibs[i] <- fib(i + 1.0);
+        i <- i + 1.0;
+    }
+    print fibs;
+    return 1.0;
+}
+================================================================================
+Code with indentations and comments for running environment:
+num fib(num n)
+%% Relative address of parameter n from this function call base pointer is -1.
+{
+    num n1; %% relative address of local variable n1 from this func call base pointer is 1.
+    num n2; %% relative address of local variable n2 from this func call base pointer is 2.
+    if( n %(addr:-1)%  <= 1.0 )
+    {
+        return n %(addr:-1)% ;
+    }
+    else
+    {
+        n1 %(addr:1)%  <- fib(n %(addr:-1)%  - 1.0);
+        n2 %(addr:2)%  <- fib(n %(addr:-1)%  - 2.0);
+        return (n1 %(addr:1)%  + n2 %(addr:2)% );
+    }
+}
+
+num main()
+{
+    num[] fibs; %% relative address of local variable fibs from this func call base pointer is 1.
+    num i; %% relative address of local variable i from this func call base pointer is 2.
+    fibs %(addr:1)%  <- new num[15.0];
+    i %(addr:2)%  <- 0.0;
+    while( i %(addr:2)%  < fibs %(addr:1)% .size )
+    {
+        fibs %(addr:1)% [i %(addr:2)% ] <- fib(i %(addr:2)%  + 1.0);
+        i %(addr:2)%  <- i %(addr:2)%  + 1.0;
+    }
+    print fibs %(addr:1)% ;
+    return 1.0;
+}
+================================================================================
+Execute:
+[1.0, 1.0, 2.0, 3.0, 5.0, 8.0, 13.0, 21.0, 34.0, 55.0, 89.0, 144.0, 233.0, 377.0, 610.0]
+Returned value by main: 1.0
+================================================================================

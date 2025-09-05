@@ -1,0 +1,9 @@
+num main  ()
+{
+    num x  ;
+    num y  ;
+    x <- 0.1 ;
+    y <- z;
+    print 2.3 + 4.5 ;
+    return 6.7 * 8.9 ;
+}

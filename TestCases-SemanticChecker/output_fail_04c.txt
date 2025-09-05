@@ -1,0 +1,2 @@
+Error: there is semantic error(s).
+[Error at 18:17] Element of array z should have a num value, instead of a bool value.

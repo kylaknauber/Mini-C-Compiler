@@ -1,0 +1,31 @@
+
+num fib(num n)
+{
+    num n1 ;
+    num n2 ;
+    if ( n <= 1 ){
+        return n;
+    } else {
+        n1 <- fib(n-1);
+        n2 <- fib(n-2);
+        return (n1 + n2);
+    }
+}
+
+num main  ()
+{
+    num[] fibs ;
+    num i ;
+
+    fibs <- new num[15];
+    i <- 0;
+    while ( i < fibs . size )
+    {
+        fibs[i] <- fib(i+1);
+        i <- i + 1;
+    }
+
+    print fibs;
+
+    return 1;
+}

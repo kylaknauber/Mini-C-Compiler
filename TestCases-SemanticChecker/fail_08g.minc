@@ -1,0 +1,30 @@
+
+num pi()
+{
+    return 3.14159265358979;
+}
+
+num select( bool sel , num v1 , num v2 )
+{
+    if ( sel )
+        return v1;
+    else
+        return v2;
+}
+
+num main  ()
+{
+    num leng  ;
+    num circ  ;
+    num pyra  ; %% pyramid
+    num sele  ;
+
+    leng <- 2;
+    circ <- leng * leng * pi();
+    pyra <- leng*2 * leng*2 * 0.43301270189;
+
+    sele <- select( circ>pyra, circ, pyra() );
+    print sele;
+
+    return 1;
+}
