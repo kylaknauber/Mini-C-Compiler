@@ -8,3 +8,5 @@ This project simulates a compiler and runtime environment for the Mini C languag
 3. Navigate to the repository directory, and open up this project in your IDE of choice (IntelliJ IDEA, Visual Studio, VS Code, etc.)
 4. In Program.java, you can replace the link to any of the success/failure files of your choosing, making sure to include the absolute path to that file
 5. Run the program
+
+#### Creator: Kyla Knauber
